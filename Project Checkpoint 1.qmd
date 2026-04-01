@@ -1,0 +1,23 @@
+---
+title: "Project Checkpoint 1"
+format: html
+---
+
+## Context of the Data Set
+
+
+
+## Data Cleaning
+
+
+
+## Research Questions
+
+
+
+## Research Questions with Extra Data
+
+
+
+## Visualizations
+
