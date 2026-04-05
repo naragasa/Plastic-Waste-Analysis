@@ -58,7 +58,7 @@ Prior to the publication of the final set *plastics.csv*, cleaning of the raw da
 
 -   [Which company tends to produce the largest grand total of plastic pollution per audit?]{.underline}
 
-    ![](images/Visualization1-02.png)
+    ![](images/Visualization1.png)
 
 -   [Do countries with larger GDPs per capita correspond with larger plastic pollution totals?]{.underline}
 
