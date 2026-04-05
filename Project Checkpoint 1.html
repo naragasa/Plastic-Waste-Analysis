@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Nico Ragasa">
 
 <title>Project Checkpoint 1</title>
 <style>
@@ -54,6 +55,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nico Ragasa </p>
+          </div>
+  </div>
     
   
     
@@ -66,12 +73,35 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="context-of-the-data-set" class="level2">
 <h2 class="anchored" data-anchor-id="context-of-the-data-set">Context of the Data Set</h2>
+<p>The data set I am working with is called “Environmental: Plastic Waste.” This data was composed by Sarah Sauve with <em>Break Free From Plastic</em>, a movement to reduce single-use plastics and combat plastic pollution. All together it contains information about plastic audits in different countries through 2019 and 2020 which tracks plastic counts by type and the company responsible. Using this data can help hold corporations accountable and track trends in plastic waste.</p>
+<p>There are 12 variables in the data set:</p>
+<ul>
+<li><p>“country” represents the country the data set took place in.</p></li>
+<li><p>“year” indicates whether it occurred in 2019 or 2020.</p></li>
+<li><p>“parent_company” indicates which company the pollution belongs to.</p></li>
+<li><p>“empty” is the count of uncategorized plastic.</p></li>
+<li><p>“hdpe” is the count of high density polyethylene.</p></li>
+<li><p>“ldpe” is the count of low density polyethylene.</p></li>
+<li><p>“o” is the count of other categories from those listed.</p></li>
+<li><p>“pet” is the count of polyester plastic.</p></li>
+<li><p>“pp” is the count of polypropylene.</p></li>
+<li><p>“ps” is the count of polystyrene.</p></li>
+<li><p>“pvc” is the count of pvc plastic.</p></li>
+<li><p>“grand_total” represents the total count of all types of plastic within each company / year / country.</p></li>
+<li><p>“num_events” represents the number of counting events.</p></li>
+<li><p>“volunteers” indicates the number of volunteers at the cleanup.</p></li>
+</ul>
 </section>
 <section id="data-cleaning" class="level2">
 <h2 class="anchored" data-anchor-id="data-cleaning">Data Cleaning</h2>
+<p>Prior to the publication of the final set <em>plastics.csv</em>, cleaning of the raw data was performed to make the data set easier to read and work with. The data corresponding to 2019 and 2020 were contained in two separate files. Each converted “Country”, “Parent_company”, and “Grand_Total” to character variables for consistency, and the rest of the variables were converted to double variables for compatible numeric values. The variable “year” was created to add the respective year to each data set, and was placed after the “country” variable. In the 2019 data, the “pp” and “ps” variables had to be cleaned to ensure <em>NA</em> values were appropriate, and unnecessary variables “ps_2” and “pp_2” were removed. In the 2020 data, the parse_number function was used to extract the numeric value for the Grand_total variable. Names were cleaned with the clean_names function in the janitor package, and rename to match the variable names in both the 2019 and 2020 data sets. The final data set was combined with bind_rows and written to a .csv file. These steps ensured the data was able to be analyzed with minimal obstacles.</p>
 </section>
 <section id="research-questions" class="level2">
 <h2 class="anchored" data-anchor-id="research-questions">Research Questions</h2>
+<ol type="1">
+<li><p>Which country has the largest number of volunteers per audit on average?</p></li>
+<li><p>Which company tends to produce the largest grand total of plastic pollution per audit?</p></li>
+</ol>
 </section>
 <section id="research-questions-with-extra-data" class="level2">
 <h2 class="anchored" data-anchor-id="research-questions-with-extra-data">Research Questions with Extra Data</h2>
