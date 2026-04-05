@@ -50,4 +50,8 @@ Prior to the publication of the final set *plastics.csv*, cleaning of the raw da
 
 ## Research Questions with Extra Data
 
+1.  Do companies with larger plastic pollution grand totals have higher annual net profits?
+
+2.  Do countries with larger GDPs per capita correspond with larger plastic pollution totals?
+
 ## Visualizations
